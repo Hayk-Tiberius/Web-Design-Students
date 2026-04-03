@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --aside: 500px;
+  --model-width: 35vw;
+  --model-height: 100vh;
+}
+
+.show {
+  background: var(--bg-show);
+  height: 100vh;
+  width: calc(100vw - var(--aside));
+  position: fixed;
+  transition: background 0.6s ease;
+}
+
+.layers {
+  position: absolute;
+  inset: 0;
+}
+
+.layers > * {
+  height: var(--model-height);
+  position: absolute;
+  left: calc(100vw - var(--aside) - 25vw);
+  top: 50%;
+  margin-left: calc(var(--model-width) / -2);
+  margin-top: calc(var(--model-height) / -2);
+  cursor: pointer;
+  animation-timeline: scroll();
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-range: 0 300vh;
+}
+
+.layers img {
+  height: 100%;
+}
+
+.layer1 {
+  margin-left: -60vw;
+  transform: scale(1);
+  animation-name: a1;
+}
+@keyframes a1 {
+  to {
+    transform: scale(5);
+    margin-left: 800vw;
+  }
+}
+
+.layer2 {
+  margin-left: -90vw;
+  transform: scale(0.88);
+  animation-name: a2;
+}
+@keyframes a2 {
+  to {
+    transform: scale(4.2);
+    margin-left: 500vw;
+  }
+}
+
+.layer3 {
+  margin-left: -130vw;
+  transform: scale(0.78);
+  animation-name: a3;
+}
+@keyframes a3 {
+  to {
+    transform: scale(3.5);
+    margin-left: 350vw;
+  }
+}
+
+.layer4 {
+  margin-left: -180vw;
+  transform: scale(0.68);
+  animation-name: a4;
+}
+@keyframes a4 {
+  to {
+    transform: scale(3);
+    margin-left: 260vw;
+  }
+}
+
+.layer5 {
+  margin-left: -250vw;
+  transform: scale(0.58);
+  animation-name: a5;
+}
+@keyframes a5 {
+  to {
+    transform: scale(2.6);
+    margin-left: 200vw;
+  }
+}
+
+.layer6 {
+  margin-left: -340vw;
+  transform: scale(0.48);
+  animation-name: a6;
+}
+@keyframes a6 {
+  to {
+    transform: scale(2.2);
+    margin-left: 150vw;
+  }
+}
+
+.layer7 {
+  margin-left: -450vw;
+  transform: scale(0.4);
+  animation-name: a7;
+}
+@keyframes a7 {
+  to {
+    transform: scale(1.9);
+    margin-left: 110vw;
+  }
+}
+
+.layer8 {
+  margin-left: -580vw;
+  transform: scale(0.33);
+  animation-name: a8;
+}
+@keyframes a8 {
+  to {
+    transform: scale(1.6);
+    margin-left: 80vw;
+  }
+}
+
+.layer9 {
+  margin-left: -730vw;
+  transform: scale(0.27);
+  animation-name: a9;
+}
+@keyframes a9 {
+  to {
+    transform: scale(1.4);
+    margin-left: 55vw;
+  }
+}
+
+.layer10 {
+  margin-left: -900vw;
+  transform: scale(0.22);
+  animation-name: a10;
+}
+@keyframes a10 {
+  to {
+    transform: scale(1.25);
+    margin-left: 35vw;
+  }
+}
+
+.layer11 {
+  margin-left: -1100vw;
+  transform: scale(0.18);
+  animation-name: a11;
+}
+@keyframes a11 {
+  to {
+    transform: scale(1.1);
+    margin-left: 20vw;
+  }
+}
+
+.layer12 {
+  margin-left: -1350vw;
+  transform: scale(0.15);
+  animation-name: a12;
+}
+@keyframes a12 {
+  to {
+    transform: scale(1);
+    margin-left: 5vw;
+  }
+}
+
+.layer13 {
+  margin-left: -1650vw;
+  transform: scale(0.12);
+  animation-name: a13;
+}
+@keyframes a13 {
+  to {
+    transform: scale(0.9);
+    margin-left: -5vw;
+  }
+}
+
+.layer14 {
+  margin-left: -2000vw;
+  transform: scale(0.1);
+  animation-name: a14;
+}
+@keyframes a14 {
+  to {
+    transform: scale(0.8);
+    margin-left: -15vw;
+  }
+}
+
+.layer15 {
+  margin-left: -2400vw;
+  transform: scale(0.08);
+  animation-name: a15;
+}
+@keyframes a15 {
+  to {
+    transform: scale(0.7);
+    margin-left: -25vw;
+  }
+}
+
+.layer16 {
+  margin-left: -2900vw;
+  transform: scale(1);
+  animation-name: a16;
+}
+@keyframes a16 {
+  to {
+    transform: scale(1.1);
+    margin-left: -35vw;
+  }
+}
+
+.next {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.layers img {
+  transition: all 0.5s ease;
+}
+
+aside {
+  width: var(--aside);
+  height: 100%;
+  right: 0;
+  top: 0;
+  position: absolute;
+  background-color: rgb(193, 180, 36);
+  animation-name: aside-linear;
+}
+
+@keyframes aside {
+  to {
+    background-color: aqua;
+  }
+}
+
+.item {
+  padding: 30px 0 40px;
+  text-align: center;
+  position: relative;
+  font-size: 14px;
+  height: 50vh;
+}
+
+.item h3 {
+  margin: 0 0 3px 0;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.item .price {
+  text-align: left;
+  font-weight: 600;
+  opacity: 0.5;
+  letter-spacing: -0.25px;
+}
+
+.item__bottom {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add {
+  font-size: 50px;
+  font-weight: 300;
+  cursor: pointer;
+  padding: 10px;
+  line-height: 20px;
+  position: relative;
+  top: -5px;
+}
+
+.item img {
+  height: calc(100% - 50px);
+
+  object-fit: contain;
+}
